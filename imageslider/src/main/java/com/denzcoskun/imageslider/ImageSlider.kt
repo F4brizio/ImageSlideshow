@@ -64,6 +64,10 @@ class ImageSlider @JvmOverloads constructor(
     private var noDots = false
     private var textColor = "#FFFFFF"
 
+    public fun getAdapter(): ViewPagerAdapter? {
+        return viewPagerAdapter
+    }
+
     init {
         LayoutInflater.from(getContext()).inflate(R.layout.image_slider, this, true)
         viewPager = findViewById(R.id.view_pager)
